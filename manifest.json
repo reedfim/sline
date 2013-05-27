@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "sline",
+  "description": "위키 코드 들여쓰기",
+  "version": "0.8.0",
+  "browser_action": {
+    "default_title" : "코드 들여쓰기",
+    "default_popup" : "popup.html"    
+  },
+  "content_scripts": [{
+    "matches": ["http://play.daumcorp.com/*"],
+    "js": [
+            "lib/jquery-1.9.1.min.js",
+            "lib/beautify.js",
+            "lib/beautify-html.js",
+            "lib/beautify-css.js", 
+            "inject.js"
+          ],
+    "run_at": "document_end"
+  }],
+  "permissions": [
+    "http://play.daumcorp.com/*",
+    "tabs"
+  ]
+  
+}
