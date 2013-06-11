@@ -3,19 +3,30 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<title>테스트</title>
+	<link href="lib/bootstrap.min.css" rel="stylesheet">
 	<style>
-		#body {width:200px;}
+		body {width:800px;}
+		ul {list-style: none;margin-left:0;}
+		.hero-unit {margin-bottom:0;}
+
 	</style>
 </head>
 <body id="body">
-	<p>
-		{newcode}~~{newcode}
-		{code}~~{code} 블럭으로 쌓여 있는 
-		텍스트의 모양을 알흠답게 만들어 줍니다.
-		<br>
-		아래버튼을 누르세요.
-	</p>
-	<button id="actionIndentBtn">indent</button>
+	<div class="hero-unit">
+		<h1>Indent Code</h1>
+		<p>WIKI 작업창에서 {newcode},{code}블럭에 들어있는 문자열의 indent를 자동으로 맞춰줍니다.</p>
+		<p>
+			<a id="actionGetBtn" class="btn btn-primary btn-large">
+				데이터 가져오기
+			</a>
+			<a id="actionIndentBtn" class="btn btn-success btn-large" style="display:none">
+				들여쓰기
+			</a>
+		</p>
+	</div>
+	<div id="codePanel"></div>
+	<script type="text/javascript" src="lib/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap.min.js"></script>
 	<script type="text/javascript" src="popup.js"></script>
 </body>
 </html>
