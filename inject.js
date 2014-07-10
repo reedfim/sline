@@ -5,6 +5,8 @@ function looks_like_html(source) {
 	return (trimmed && (trimmed.substring(0, 1) === '<' && trimmed.substring(0, 4) !== comment_mark));
 }
 
+
+
 function beautify(source) {
 	if (source == null) return;
 
